@@ -1,6 +1,7 @@
 package com.testography.testographyradio.fragments;
 
 
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -74,13 +75,16 @@ public class StationsFragment extends Fragment {
                 break;
             case STATION_TYPE_RECENT:
                 adapter = new StationsAdapter(DataService.getInstance()
-                        .getRecentStations());
+                        .getFeaturedStations());
                 break;
             default:
                 adapter = new StationsAdapter(DataService.getInstance()
-                        .getPartyStations());
+                        .getFeaturedStations());
                 break;
         }
+
+        recyclerView.addItemDecoration(new HorizontalSpaceItemDecorator(30));
+
         recyclerView.setAdapter(adapter);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
@@ -91,4 +95,20 @@ public class StationsFragment extends Fragment {
         return v;
     }
 
+    class HorizontalSpaceItemDecorator extends RecyclerView.ItemDecoration {
+        private final int mSpacer;
+
+        public HorizontalSpaceItemDecorator(int spacer) {
+            mSpacer = spacer;
+        }
+
+        @Override
+        public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
+            super.getItemOffsets(outRect, view, parent, state);
+
+            outRect.right = mSpacer;
+        }
+    }
 }
+
+

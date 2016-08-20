@@ -17,6 +17,6 @@ public class Station {
     }
 
     public String getImgUri() {
-        return mImgUri;
+        return DRAWABLE + mImgUri;
     }
 }

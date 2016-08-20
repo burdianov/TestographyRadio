@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:adroid="http://schemas.android.com/apk/res/android"
+    adroid:id="@+id/card_station"
+    adroid:layout_width="wrap_content"
+    adroid:layout_height="wrap_content">
+
+    <LinearLayout
+        adroid:orientation="vertical"
+        adroid:layout_width="match_parent"
+        adroid:layout_height="match_parent">
+
+        <ImageView
+            adroid:src="@drawable/flightplanmusic"
+            adroid:id="@+id/main_image"
+            adroid:layout_width="wrap_content"
+            adroid:layout_height="wrap_content"/>
+
+        <TextView
+            adroid:layout_marginLeft="6dp"
+            adroid:textColor="#4A4A4A"
+            adroid:textSize="16dp"
+            adroid:id="@+id/main_text"
+            adroid:text="Flight Plan (Tunes for Travel)"
+            adroid:lines="2"
+            adroid:layout_width="match_parent"
+            adroid:layout_height="50dp"/>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
