@@ -1,9 +1,11 @@
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="#3db7df"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.testography.testographyradio.fragments.StationsFragment">
 
+    <include layout="@layout/content_stations_recycler"/>
 
 </FrameLayout>
